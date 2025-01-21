@@ -46,6 +46,9 @@ return (
 
         {/* Main Content */}
         <main className="container mx-auto px-4 py-8">
+        <div className="py-20">
+            <EventDetails />
+          </div>
           {/* Event Details Section */}
           <section className="mb-12">
             <div className="bg-white bg-opacity-90 rounded-lg shadow-lg p-8">
@@ -82,9 +85,7 @@ return (
               <ExhibitorRegistrationForm />
             </div>
           </section>
-          <div className="py-20">
-            <EventDetails />
-          </div>
+          
         </main>
 
         {/* Footer */}
