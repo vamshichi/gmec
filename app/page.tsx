@@ -36,7 +36,7 @@ return (
                 />
               </div>
               <div>
-                <h1 className="text-4xl font-extrabold text-center">Gmec India 2025</h1>
+                <h1 className="text-4xl font-extrabold text-center">GMEC India 2025</h1>
                 <p className="text-center mt-2 text-lg">April 25th to 27th, 2025</p>
                 <p> <span>Venue:</span> Palace Grounds, Tripura Vasini A/C, Bengaluru, India</p>
               </div>
