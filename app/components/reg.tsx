@@ -34,6 +34,9 @@ const ExhibitorRegistrationForm = () => {
         if (formRef.current) {
           formRef.current.reset();
         }
+
+        // Optionally, reload the page to clear any persisted state (not mandatory)
+        // window.location.reload();
       } else {
         alert("There was an error. Please try again.");
       }
