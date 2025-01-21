@@ -58,7 +58,7 @@ return (
                   <strong>Date:</strong> April 25th to 27th, 2025
                 </li>
                 <li>
-                  Join us for India's largest healthcare exhibition, showcasing cutting-edge innovations in medical
+                  Join us for India&apos;s largest healthcare exhibition, showcasing cutting-edge innovations in medical
                   technology and services.
                 </li>
               </ul>
