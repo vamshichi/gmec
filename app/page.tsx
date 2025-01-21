@@ -1,101 +1,100 @@
-import Image from "next/image";
+import Image from "next/image"
+// import ClientQRScanner from "@/app/components/ClientQRScanner"
+import bg from '@/public/images/bg.jpg'
+import logo from '@/public/images/gmec logo.jpg'
+import EventDetails from "./components/EventDetails"
+import ExhibitorRegistrationForm from "./components/reg"
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+export default function HealthcareExpoLanding() {
+return (
+    <div className="min-h-screen relative">
+      {/* Full-page background image */}
+      <div className="fixed inset-0 z-0">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src={bg}
+          alt="Healthcare background"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
           priority
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <div className="relative z-10">
+        {/* Header */}
+        <header className="bg-sky-600 bg-opacity-90 text-white">
+          <div className="container mx-auto px-4 py-6">
+            <div className="flex items-center justify-between">
+              {/* Logo */}
+              <div className="w-16 h-16 relative">
+                <Image
+                  src={logo}
+                  alt="Healthcare Expo Logo"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+              <div>
+                <h1 className="text-4xl font-extrabold text-center">Healthcare Expo 2025</h1>
+                <p className="text-center mt-2 text-lg">April 25th to 27th, 2025</p>
+              </div>
+              <div className="w-16 h-16"></div> {/* Placeholder for symmetry */}
+            </div>
+          </div>
+        </header>
+
+        {/* Main Content */}
+        <main className="container mx-auto px-4 py-8">
+          {/* Event Details Section */}
+          <section className="mb-12">
+            <div className="bg-white bg-opacity-90 rounded-lg shadow-lg p-8">
+              <h2 className="text-3xl font-bold mb-6 text-blue-700">Event Details</h2>
+              <ul className="space-y-4 text-gray-700 text-lg">
+                <li>
+                  <strong>Venue:</strong> Palace Grounds, Tripura Vasini A/C, Bengaluru, India
+                </li>
+                <li>
+                  <strong>Date:</strong> April 25th to 27th, 2025
+                </li>
+                <li>
+                  Join us for India's largest healthcare exhibition, showcasing cutting-edge innovations in medical
+                  technology and services.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          {/* QR Scanner Section */}
+          {/* <section className="mb-12">
+            <div className="bg-white bg-opacity-90 rounded-lg shadow-lg p-8">
+              <h2 className="text-3xl font-bold mb-6 text-blue-700">Scan QR Code</h2>
+              <p className="text-gray-600 text-lg mb-8">Scan the QR code to connect on WhatsApp.</p>
+              <ClientQRScanner />
+            </div>
+          </section> */}
+
+          {/* Exhibitor Registration Section */}
+          <section>
+            <div className="bg-white bg-opacity-90 rounded-lg shadow-lg p-8">
+              <h2 className="text-3xl font-bold mb-6 text-blue-700">Exhibitor Registration</h2>
+              <p className="text-gray-600 text-lg mb-8">Fill out the form below to register as an exhibitor.</p>
+              <ExhibitorRegistrationForm />
+            </div>
+          </section>
+          <div className="py-20">
+            <EventDetails />
+          </div>
+        </main>
+
+        {/* Footer */}
+        <footer className="bg-gray-100 bg-opacity-90 mt-12">
+          <div className="container mx-auto px-4 py-6 text-center">
+            <p className="text-gray-600">&copy; 2025 Healthcare Expo. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
     </div>
-  );
+  )
 }
+
