@@ -36,8 +36,9 @@ return (
                 />
               </div>
               <div>
-                <h1 className="text-4xl font-extrabold text-center">Healthcare Expo 2025</h1>
+                <h1 className="text-4xl font-extrabold text-center">Gmec India 2025</h1>
                 <p className="text-center mt-2 text-lg">April 25th to 27th, 2025</p>
+                <p> <span>Venue:</span> Palace Grounds, Tripura Vasini A/C, Bengaluru, India</p>
               </div>
               <div className="w-16 h-16"></div> {/* Placeholder for symmetry */}
             </div>
@@ -61,7 +62,7 @@ return (
                   <strong>Date:</strong> April 25th to 27th, 2025
                 </li>
                 <li>
-                  Join us for India&apos;s largest healthcare exhibition, showcasing cutting-edge innovations in medical
+                  Join us for India&apos;s largest Medical exhibition, showcasing cutting-edge innovations in medical
                   technology and services.
                 </li>
               </ul>
@@ -91,7 +92,7 @@ return (
         {/* Footer */}
         <footer className="bg-gray-100 bg-opacity-90 mt-12">
           <div className="container mx-auto px-4 py-6 text-center">
-            <p className="text-gray-600">&copy; 2025 Healthcare Expo. All rights reserved.</p>
+            <p className="text-gray-600">&copy; 2025 Gmec India. All rights reserved.</p>
           </div>
         </footer>
       </div>

@@ -54,7 +54,7 @@ const ExhibitorRegistrationForm = () => {
     "Emergency and Trauma Care",
     "Dental Equipment",
     "Wellness and Fitness",
-    "Vision and Eye Care",
+    "Medical Furniture",
     "Others",
   ];
 
