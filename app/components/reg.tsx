@@ -1,9 +1,10 @@
-// ExhibitorRegistrationForm.tsx
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 
 const ExhibitorRegistrationForm = () => {
+  const formRef = useRef<HTMLFormElement>(null); // Reference for the form
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -14,9 +15,7 @@ const ExhibitorRegistrationForm = () => {
       designation: formData.get("designation"),
       email: formData.get("email"),
       phone: formData.get("phone"),
-      industryCategories: Array.from(
-        formData.getAll("industry-category")
-      ) as string[],
+      industryCategories: Array.from(formData.getAll("industry-category")) as string[],
     };
 
     try {
@@ -30,6 +29,11 @@ const ExhibitorRegistrationForm = () => {
 
       if (response.ok) {
         alert("Registration successful!");
+
+        // Reset the form after successful submission
+        if (formRef.current) {
+          formRef.current.reset();
+        }
       } else {
         alert("There was an error. Please try again.");
       }
@@ -55,7 +59,7 @@ const ExhibitorRegistrationForm = () => {
   ];
 
   return (
-    <form className="space-y-6" onSubmit={handleSubmit}>
+    <form ref={formRef} className="space-y-6" onSubmit={handleSubmit}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Company Name */}
         <div>
