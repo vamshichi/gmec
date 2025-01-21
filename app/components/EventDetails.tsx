@@ -4,7 +4,7 @@ const EventDetails = () => {
   return (
     <div className="bg-white text-gray-800 p-8 rounded-lg shadow-md">
       <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">
-        Welcome to GMEC INDIA 2025 – A Premier Destination for Medical Equipment Exhibitions
+        Welcome to GMEC INDIA 2025 – A Premier Destination for Medical Exhibitions & Conference in Bengaluru
       </h1>
       <p className="text-lg text-center italic mb-6">
         Where Innovation Meets Opportunity in the Heart of Healthcare
