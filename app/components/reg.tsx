@@ -34,9 +34,6 @@ const ExhibitorRegistrationForm = () => {
         if (formRef.current) {
           formRef.current.reset();
         }
-
-        // Optionally, reload the page to clear any persisted state (not mandatory)
-        // window.location.reload();
       } else {
         alert("There was an error. Please try again.");
       }
@@ -167,6 +164,7 @@ const ExhibitorRegistrationForm = () => {
                 type="checkbox"
                 id={category.toLowerCase().replace(/\s+/g, "-")}
                 name="industry-category"
+                value={category}
                 className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
               />
               <label
@@ -179,6 +177,7 @@ const ExhibitorRegistrationForm = () => {
           ))}
         </div>
       </div>
+
 
       <button
         type="submit"
